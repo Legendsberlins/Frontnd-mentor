@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face{
+    font-family: 'HankenGrotesk';
+    src: url('/fonts/HankenGrotesk-VariableFont_wght.ttf');
+    font-weight: 100 900;
+}
+body{
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+}
+.results-summary{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    max-width: 46rem;
+    background-color: white;
+    box-shadow: 2px 15px 15px hsla(0, 2%, 72%, 0.24);
+    border-radius: 2rem;
+}
+
+.results{
+    padding: 2rem;
+    text-align: center;
+    background-image: linear-gradient(hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    color: hsla(0, 8%, 80%, 0.863);
+    width:50%;
+    border-radius: 2rem;
+}
+.results-border{
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 12rem;
+    aspect-ratio: 1/1;
+    margin-inline: auto;
+    padding: 3rem;
+}
+.results-border span{
+    display: block;
+    font-size: 5em;
+    font-weight: bold;
+    color: white;
+}
+.results-rank{
+    display: bold;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+}
+.grid-flow{
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+}
+.grid-flow[data-spacing="large"]{
+    gap: 2rem;
+}
+.summary{
+    padding: 2rem;
+    width: 50%;
+
+}
+.summary-icon-group{
+    display: flex;
+    gap: 0.5rem;
+}
+.summary-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+}
+.item1{
+    background-color: hsla(0, 100%, 67%, 0.151);
+    color: hsl(0, 100%, 67%);
+}
+.item2{
+    background-color: hsla(39, 100%, 56%, 0.151);
+    color:hsl(39, 100%, 56%);
+}
+.item3{
+    background-color: hsla(166, 100%, 37%, 0.151);
+    color:hsl(166, 100%, 37%);
+}
+.item4{
+    background-color: hsla(234, 85%, 45%, 0.151);
+    color:hsl(234, 85%, 45%);
+}
+.summary-score{
+    color: black;
+}
+.summary-score span{
+    font-weight: bold;
+}
+button{
+    padding: 1rem;
+    background-color:hsl(224, 30%, 27%);
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+}
+button:hover{
+    background:hsl(252, 100%, 67%);
+}
+@media (max-width: 500px){
+    body{
+        display:flex;
+        flex-direction: column;
+    }
+    .results-summary{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .results{
+        min-width: 100%;
+        border-radius: 0rem 0rem 2rem 2rem;
+
+    }
+    .summary{
+        min-width: 100%;
+    }
+}
